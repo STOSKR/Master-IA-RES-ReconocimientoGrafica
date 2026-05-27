@@ -1,0 +1,215 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+\graphicspath{{outputs/auto_clean_debug/}{../outputs/auto_clean_debug/}}
+
+\definecolor{bg}{HTML}{111820}
+\definecolor{panel}{HTML}{1D2530}
+\definecolor{green}{HTML}{80C41C}
+\definecolor{cyan}{HTML}{17A2FF}
+\definecolor{yellow}{HTML}{F3D54E}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamercolor{normal text}{fg=white,bg=bg}
+\setbeamercolor{frametitle}{fg=white,bg=bg}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{structure}{fg=green}
+\setbeamercolor{block title}{fg=white,bg=panel}
+\setbeamercolor{block body}{fg=white,bg=panel}
+
+\title{Reconocimiento de gráficas}
+\subtitle{Digitalización de series temporales financieras con visión artificial y OCR}
+\author{Shiyi Cheng}
+\institute{Máster MIARFID -- Reconocimiento de Escritura}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Objetivo}
+  \begin{col}
+  \Large{\begin{center}
+    Captura de pantalla 
+    
+    $\downarrow$ 
+    
+    Serie temporal estructurada.
+  \end{center}}
+\end{frame}
+
+\begin{frame}{No es solo OCR}
+  \Large
+  El OCR lee texto, pero la serie sale de la imagen completa.
+
+  \vspace{0.5cm}
+  \begin{columns}
+    \column{0.33\textwidth}
+    \textbf{\textcolor{green}{Visión}}\\
+    Detecta layout, ejes y línea.
+
+    \column{0.33\textwidth}
+    \textbf{\textcolor{cyan}{OCR}}\\
+    Lee fechas y precios.
+
+    \column{0.33\textwidth}
+    \textbf{\textcolor{yellow}{Geometría}}\\
+    Convierte píxeles en datos.
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Pipeline}
+  \Large
+  \begin{enumerate}
+    \item Segmentación del layout.
+    \item OCR de anclas en ejes.
+    \item Extracción de la señal visual.
+    \item Calibración píxel-dato.
+    \item Exportación y depuración.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Layout y OCR}
+  \begin{columns}
+    \column{0.55\textwidth}
+    \includegraphics[width=\linewidth]{2-1_debug.png}
+
+    \column{0.42\textwidth}
+    \Large
+    \begin{itemize}
+      \item ROI del área de plot.
+      \item ROI de eje X y eje Y.
+      \item PaddleOCR para fechas y precios.
+      \item Limpieza de anclas erróneas.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Señal visual}
+  \begin{columns}
+    \column{0.55\textwidth}
+    \includegraphics[width=\linewidth]{1-4_debug.png}
+
+    \column{0.42\textwidth}
+    \Large
+    \begin{itemize}
+      \item Filtrado por color dominante.
+      \item Máscara de la línea de precio.
+      \item Centro ponderado.
+      \item Línea final de 1 píxel.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Reconstrucción geométrica}
+  \Large
+  Se ajustan dos transformaciones lineales:
+
+  \vspace{0.4cm}
+  \begin{block}{Eje X}
+    \texttt{pixel\_x $\rightarrow$ fecha}
+  \end{block}
+
+  \begin{block}{Eje Y}
+    \texttt{pixel\_y $\rightarrow$ precio}
+  \end{block}
+
+  \vspace{0.3cm}
+  Las anclas OCR definen la escala real de la gráfica.
+\end{frame}
+
+\begin{frame}{Batch automático}
+  \Large
+  El comando procesa todas las imágenes de \texttt{data/raw}.
+
+  \vspace{0.4cm}
+  \begin{block}{Comando}
+    \texttt{python -m recongrafica batch --raw-dir data/raw --out-dir outputs/auto --use-ocr}
+  \end{block}
+
+  \vspace{0.2cm}
+  Por cada imagen genera: \textbf{CSV, JSON, debug PNG y mask PNG}.
+\end{frame}
+
+\begin{frame}{Resultados auditables}
+  \begin{columns}
+    \column{0.32\textwidth}
+    \includegraphics[width=\linewidth]{1-2_debug.png}\\
+    \textbf{1-2.csv}
+
+    \column{0.32\textwidth}
+    \includegraphics[width=\linewidth]{2-1_debug.png}\\
+    \textbf{2-1.csv}
+
+    \column{0.32\textwidth}
+    \includegraphics[width=\linewidth]{2-5_debug.png}\\
+    \textbf{2-5.csv}
+  \end{columns}
+
+  \vspace{0.5cm}
+  \Large
+  Cada CSV queda acompañado por evidencia visual de la extracción.
+\end{frame}
+
+\begin{frame}{Evaluación}
+  \Large
+  \begin{columns}
+    \column{0.5\textwidth}
+    \textbf{\textcolor{cyan}{OCR}}\\
+    CER y WER sobre fechas y precios.
+
+    \column{0.5\textwidth}
+    \textbf{\textcolor{green}{Serie reconstruida}}\\
+    MSE, RMSE y MAE contra datos reales.
+  \end{columns}
+
+  \vspace{0.8cm}
+  La evaluación necesita ground truth o datos de control del scraper.
+\end{frame}
+
+\begin{frame}{Problemas encontrados}
+  \Large
+  \begin{itemize}
+    \item ROI del eje X demasiado baja.
+    \item Máscara inicial demasiado gruesa.
+    \item OCR con falsas anclas.
+    \item Fechas parciales como \texttt{27/05/20}.
+  \end{itemize}
+
+  \vspace{0.5cm}
+  El debug visual permitió localizar y corregir estos fallos.
+\end{frame}
+
+\begin{frame}{Estado actual}
+  \Large
+  \begin{block}{Conseguido}
+    Pipeline completo, OCR automático, batch y salidas versionadas.
+  \end{block}
+
+  \begin{block}{Siguiente paso}
+    Integrar scraper y construir ground truth para medir precisión real.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Cierre}
+  \Huge
+  De gráfica rasterizada a dato estructurado.
+
+  \vspace{0.7cm}
+  \Large
+  Visión artificial para entender la imagen.\\
+  OCR para leer las anclas.\\
+  Geometría para reconstruir la serie.
+\end{frame}
+
+\end{document}

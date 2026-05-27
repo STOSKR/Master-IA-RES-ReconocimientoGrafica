@@ -50,6 +50,38 @@ def test_pipeline_with_synthetic_steam_like_chart_and_manual_anchors(tmp_path: P
     assert result["metrics"]["series"]["overlap_points"] >= 8
 
 
+def test_pipeline_does_not_overwrite_existing_outputs(tmp_path: Path):
+    image_path = tmp_path / "chart.png"
+    anchors_path = tmp_path / "anchors.json"
+    out_prefix = tmp_path / "out" / "chart"
+
+    image = _synthetic_chart()
+    cv2.imwrite(str(image_path), image)
+    anchors_path.write_text(
+        json.dumps(
+            {
+                "y": [
+                    {"text": "1,00 EUR", "pixel": [65, 420]},
+                    {"text": "2,00 EUR", "pixel": [65, 120]},
+                ],
+                "x": [
+                    {"text": "01/01/2025", "pixel": [120, 462]},
+                    {"text": "11/01/2025", "pixel": [760, 462]},
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    first = run_extract(image_path, out_prefix, anchors_path=anchors_path)
+    second = run_extract(image_path, out_prefix, anchors_path=anchors_path)
+
+    assert first["csv"].endswith("chart.csv")
+    assert second["csv"].endswith("chart_001.csv")
+    assert Path(first["csv"]).exists()
+    assert Path(second["csv"]).exists()
+
+
 def _synthetic_chart() -> np.ndarray:
     image = np.full((520, 900, 3), (42, 42, 42), dtype=np.uint8)
     plot_left, plot_top, plot_right, plot_bottom = 120, 100, 780, 430

@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import inspect
 import json
+import os
 from pathlib import Path
 from typing import Literal
 
@@ -37,6 +39,20 @@ def run_ocr_baselines(image: np.ndarray, layout: Layout, languages: list[str] | 
     }
 
 
+def merge_ocr_results(baselines: dict[str, list[OCRResult]]) -> list[OCRResult]:
+    merged: list[OCRResult] = []
+    seen: set[tuple[str, str, int, int]] = set()
+    for source_results in baselines.values():
+        for result in source_results:
+            cx, cy = result.box.center
+            key = (result.axis, result.text.strip(), int(round(cx / 8)), int(round(cy / 8)))
+            if key in seen:
+                continue
+            seen.add(key)
+            merged.append(result)
+    return merged
+
+
 def run_paddle_ocr(
     image: np.ndarray,
     layout: Layout,
@@ -45,7 +61,7 @@ def run_paddle_ocr(
 ) -> list[OCRResult]:
     PaddleOCR = _load_paddleocr()
     lang = (languages or ["en"])[0]
-    engine = PaddleOCR(use_angle_cls=True, lang=lang, show_log=False)
+    engine = _create_paddle_engine(PaddleOCR, lang)
     source: Literal["paddle_preprocessed", "paddle_raw"] = "paddle_preprocessed" if preprocessed else "paddle_raw"
 
     results: list[OCRResult] = []
@@ -54,7 +70,7 @@ def run_paddle_ocr(
         inference_image = normalize_for_ocr(roi_image) if preprocessed else roi_image
         scale_x = inference_image.shape[1] / roi.width
         scale_y = inference_image.shape[0] / roi.height
-        raw = engine.ocr(inference_image, cls=True)
+        raw = _run_paddle_engine(engine, inference_image)
         for line in _iter_paddle_lines(raw):
             points, (text, confidence) = line
             box = _box_from_points(points, roi, scale_x, scale_y)
@@ -71,6 +87,8 @@ def run_paddle_ocr(
 
 
 def _load_paddleocr():
+    os.environ.setdefault("FLAGS_use_mkldnn", "0")
+    os.environ.setdefault("FLAGS_use_onednn", "0")
     try:
         from paddleocr import PaddleOCR
     except ImportError as exc:
@@ -81,10 +99,53 @@ def _load_paddleocr():
     return PaddleOCR
 
 
+def _create_paddle_engine(PaddleOCR, lang: str):
+    signature = inspect.signature(PaddleOCR)
+    if "use_doc_unwarping" in signature.parameters:
+        return PaddleOCR(
+            lang=lang,
+            use_doc_orientation_classify=False,
+            use_doc_unwarping=False,
+            use_textline_orientation=True,
+        )
+    try:
+        return PaddleOCR(use_angle_cls=True, lang=lang, show_log=False)
+    except Exception as exc:
+        if "show_log" not in str(exc):
+            raise
+        return PaddleOCR(use_angle_cls=True, lang=lang)
+
+
+def _run_paddle_engine(engine, image: np.ndarray):
+    try:
+        if hasattr(engine, "predict"):
+            return engine.predict(image)
+        return engine.ocr(image, cls=True)
+    except TypeError as exc:
+        if "cls" not in str(exc):
+            raise
+        return engine.ocr(image)
+    except NotImplementedError as exc:
+        raise RuntimeError(
+            "PaddleOCR esta instalado, pero PaddlePaddle ha fallado al ejecutar el modelo. "
+            "En Windows esto suele ocurrir con versiones recientes de paddlepaddle 3.x. "
+            "Usa Python 3.11 y reinstala con `pip install -e \".[dev,ocr]\"`, que fija PaddleOCR/PaddlePaddle 2.x."
+        ) from exc
+
+
 def _iter_paddle_lines(raw: list) -> list:
     lines = []
     for block in raw or []:
         if block is None:
+            continue
+        if hasattr(block, "to_dict"):
+            block = block.to_dict()
+        if isinstance(block, dict):
+            texts = block.get("rec_texts", [])
+            scores = block.get("rec_scores", [])
+            polys = block.get("rec_polys", block.get("dt_polys", []))
+            for points, text, confidence in zip(polys, texts, scores):
+                lines.append((points, (text, confidence)))
             continue
         if block and isinstance(block[0], list) and len(block[0]) == 2 and isinstance(block[0][1], tuple):
             lines.extend(block)

@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 import cv2
+import numpy as np
 import pandas as pd
 
 from recongrafica.image_io import ensure_parent
@@ -63,6 +64,8 @@ def save_debug_image(
     _rectangle(debug, layout.x_axis_roi, (220, 160, 60), 2)
     _rectangle(debug, layout.y_axis_roi, (60, 160, 220), 2)
     for result in ocr_results:
+        if not _matches_anchor(result, anchors):
+            continue
         color = (255, 180, 0) if result.axis == "x" else (0, 180, 255)
         _rectangle(debug, result.box, color, 1)
         cv2.putText(debug, result.text[:18], (result.box.x, max(12, result.box.y - 3)), cv2.FONT_HERSHEY_SIMPLEX, 0.4, color, 1)
@@ -71,8 +74,12 @@ def save_debug_image(
             cv2.circle(debug, (int(anchor.pixel), layout.x_axis_roi.y + 5), 5, (255, 0, 255), -1)
         else:
             cv2.circle(debug, (layout.y_axis_roi.right - 5, int(anchor.pixel)), 5, (255, 0, 255), -1)
-    for point in signal:
-        cv2.circle(debug, (int(point.pixel_x), int(point.pixel_y)), 1, (0, 255, 255), -1)
+    if signal:
+        polyline = np.array(
+            [[point.pixel_x, int(round(point.pixel_y))] for point in signal],
+            dtype=np.int32,
+        ).reshape((-1, 1, 2))
+        cv2.polylines(debug, [polyline], False, (0, 255, 255), 1)
     cv2.imwrite(str(path), debug)
 
 
@@ -83,3 +90,14 @@ def save_mask(mask, path: str | Path) -> None:
 
 def _rectangle(image, box, color: tuple[int, int, int], thickness: int) -> None:
     cv2.rectangle(image, (box.x, box.y), (box.right, box.bottom), color, thickness)
+
+
+def _matches_anchor(result: OCRResult, anchors: list[AxisAnchor]) -> bool:
+    cx, cy = result.box.center
+    pixel = cx if result.axis == "x" else cy
+    return any(
+        anchor.axis == result.axis
+        and anchor.text == result.text
+        and abs(anchor.pixel - pixel) <= 4
+        for anchor in anchors
+    )

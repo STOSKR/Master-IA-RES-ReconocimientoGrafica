@@ -11,6 +11,10 @@ def detect_layout(image: np.ndarray) -> Layout:
     height, width = image.shape[:2]
     fallback = _fallback_layout(width, height)
 
+    axis_layout = _axis_grid_layout(image)
+    if axis_layout is not None:
+        return axis_layout
+
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     edges = cv2.Canny(gray, 50, 150)
     horizontal_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (max(20, width // 18), 1))
@@ -49,6 +53,66 @@ def detect_layout(image: np.ndarray) -> Layout:
     return _layout_from_plot(plot, width, height)
 
 
+def _axis_grid_layout(image: np.ndarray) -> Layout | None:
+    height, width = image.shape[:2]
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+
+    # Ejes y ticks suelen ser grises: mas brillantes que el fondo y con baja saturacion.
+    neutral = ((gray > 52) & (hsv[:, :, 1] < 80)).astype(np.uint8)
+    vertical_counts = neutral.sum(axis=0)
+    vertical_groups = _groups_from_indices(np.where(vertical_counts > height * 0.35)[0])
+    if len(vertical_groups) < 2:
+        return None
+
+    centers = [(start + end) // 2 for start, end in vertical_groups]
+    left_candidates = [x for x in centers if x < width * 0.4]
+    right_candidates = [x for x in centers if x > width * 0.55]
+    if not left_candidates or not right_candidates:
+        return None
+
+    left = max(left_candidates)
+    right = min(right_candidates)
+    if right - left < width * 0.35:
+        return None
+
+    axis_band = np.zeros(height, dtype=np.int32)
+    for x in (left, right):
+        x0 = max(0, x - 4)
+        x1 = min(width, x + 5)
+        axis_band += neutral[:, x0:x1].sum(axis=1).astype(np.int32)
+
+    tick_rows = np.where(axis_band >= 3)[0]
+    row_groups = _groups_from_indices(tick_rows)
+    row_centers = [(start + end) // 2 for start, end in row_groups if end - start <= 4]
+    if len(row_centers) < 2:
+        return None
+
+    top = min(row_centers)
+    bottom = max(row_centers)
+    if bottom - top < height * 0.35:
+        return None
+
+    plot = Box(left, top, right - left, bottom - top).clamp(width, height)
+    return _layout_from_plot(plot, width, height)
+
+
+def _groups_from_indices(indices: np.ndarray) -> list[tuple[int, int]]:
+    if indices.size == 0:
+        return []
+    groups: list[tuple[int, int]] = []
+    start = prev = int(indices[0])
+    for value in indices[1:]:
+        current = int(value)
+        if current == prev + 1:
+            prev = current
+            continue
+        groups.append((start, prev))
+        start = prev = current
+    groups.append((start, prev))
+    return groups
+
+
 def _fallback_layout(width: int, height: int) -> Layout:
     plot = Box(
         x=int(width * 0.13),
@@ -60,6 +124,7 @@ def _fallback_layout(width: int, height: int) -> Layout:
 
 
 def _layout_from_plot(plot: Box, width: int, height: int) -> Layout:
+    x_axis_top = max(0, plot.bottom - int(height * 0.05))
     y_axis = Box(
         x=max(0, plot.x - int(width * 0.12)),
         y=plot.y,
@@ -68,8 +133,8 @@ def _layout_from_plot(plot: Box, width: int, height: int) -> Layout:
     ).clamp(width, height)
     x_axis = Box(
         x=plot.x,
-        y=plot.bottom,
+        y=x_axis_top,
         width=plot.width,
-        height=max(1, min(height - plot.bottom, int(height * 0.18))),
+        height=max(1, min(height - x_axis_top, int(height * 0.23))),
     ).clamp(width, height)
     return Layout(plot_area=plot, x_axis_roi=x_axis, y_axis_roi=y_axis)

@@ -28,7 +28,17 @@ def anchors_from_ocr(results: list[OCRResult]) -> tuple[list[AxisAnchor], list[O
     return anchors, rejected
 
 
+def clean_anchors_for_reconstruction(anchors: list[AxisAnchor]) -> list[AxisAnchor]:
+    x_anchors = _deduplicate_anchors([a for a in anchors if a.axis == "x" and isinstance(a.value, date)])
+    y_anchors = _deduplicate_anchors([a for a in anchors if a.axis == "y" and isinstance(a.value, float)])
+    return [
+        *_filter_linear_outliers(x_anchors, value_to_float=_date_to_ordinal, max_error=45.0),
+        *_filter_linear_outliers(y_anchors, value_to_float=float, max_error=None),
+    ]
+
+
 def reconstruct_series(signal: list[SignalPoint], anchors: list[AxisAnchor]) -> list[SeriesPoint]:
+    anchors = clean_anchors_for_reconstruction(anchors)
     x_anchors = [a for a in anchors if a.axis == "x" and isinstance(a.value, date)]
     y_anchors = [a for a in anchors if a.axis == "y" and isinstance(a.value, float)]
     if len(x_anchors) < 2:
@@ -71,3 +81,46 @@ def _date_to_ordinal(value: date) -> int:
     if isinstance(value, datetime):
         return value.date().toordinal()
     return value.toordinal()
+
+
+def _deduplicate_anchors(anchors: list[AxisAnchor]) -> list[AxisAnchor]:
+    output: list[AxisAnchor] = []
+    for anchor in sorted(anchors, key=lambda item: (item.pixel, str(item.value), -item.confidence)):
+        duplicate_index = next(
+            (
+                index
+                for index, existing in enumerate(output)
+                if abs(existing.pixel - anchor.pixel) <= 4 and existing.value == anchor.value
+            ),
+            None,
+        )
+        if duplicate_index is None:
+            output.append(anchor)
+            continue
+        if anchor.confidence > output[duplicate_index].confidence:
+            output[duplicate_index] = anchor
+    return sorted(output, key=lambda item: item.pixel)
+
+
+def _filter_linear_outliers(
+    anchors: list[AxisAnchor],
+    value_to_float,
+    max_error: float | None,
+) -> list[AxisAnchor]:
+    if len(anchors) < 3:
+        return anchors
+
+    kept = anchors[:]
+    while len(kept) >= 3:
+        pixels = np.array([anchor.pixel for anchor in kept], dtype=float)
+        values = np.array([value_to_float(anchor.value) for anchor in kept], dtype=float)
+        coef = np.polyfit(pixels, values, deg=1)
+        residuals = np.abs(values - np.polyval(coef, pixels))
+        median = float(np.median(residuals))
+        mad = float(np.median(np.abs(residuals - median)))
+        threshold = max_error if max_error is not None else max(1.0, median + 6 * mad)
+        worst = int(np.argmax(residuals))
+        if residuals[worst] <= threshold:
+            break
+        kept.pop(worst)
+    return kept

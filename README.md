@@ -30,6 +30,33 @@ Si PaddleOCR no esta instalado o se quiere fijar una referencia manual, se puede
 python -m recongrafica extract --image data/raw/captura.png --out outputs/captura --anchors data/anchors/captura.json
 ```
 
+Si la linea dibujada es gruesa o tiene antialiasing, se puede ajustar que parte vertical del trazo se toma como senal. `0.5` usa el centro; valores como `0.9` usan una zona mas baja del trazo, util cuando el CSV queda sistematicamente por encima del tooltip real:
+
+```powershell
+python -m recongrafica extract --image data/raw/captura.png --out outputs/captura --anchors data/anchors/captura.json --signal-quantile 0.9
+```
+
+## Procesado por lotes
+
+Para procesar todas las imagenes de `data/raw`, creando salidas con el mismo nombre en `outputs/batch`:
+
+```powershell
+python -m recongrafica batch --raw-dir data/raw --out-dir outputs/batch --anchors-dir data/anchors --signal-quantile 0.9
+```
+
+El comando busca un JSON de anclas con el mismo nombre que cada imagen. Por ejemplo:
+
+- `data/raw/captura.png`
+- `data/anchors/captura.json`
+- `outputs/batch/captura.csv`
+- `outputs/batch/captura_debug.png`
+
+Si una imagen no tiene JSON de anclas, se salta. Para intentar procesarla igualmente con PaddleOCR:
+
+```powershell
+python -m recongrafica batch --raw-dir data/raw --out-dir outputs/batch --anchors-dir data/anchors --use-ocr
+```
+
 Formato minimo de `anchors.json`:
 
 ```json
@@ -53,6 +80,12 @@ Para un prefijo `outputs/captura`, el pipeline genera:
 - `outputs/captura.json`: metadatos, anclas, resultados OCR, serie y metricas.
 - `outputs/captura_debug.png`: visualizacion de plot area, ROIs, cajas OCR/anclas y linea extraida.
 - `outputs/captura_mask.png`: mascara binaria usada para extraer la senal.
+
+Si esos ficheros ya existen, no se sobrescriben: se crea automaticamente el siguiente nombre libre, por ejemplo `outputs/captura_001.csv`, `outputs/captura_001_debug.png`, etc. Para sobrescribir explicitamente:
+
+```powershell
+python -m recongrafica extract --image data/raw/captura.png --out outputs/captura --anchors data/anchors/captura.json --overwrite
+```
 
 ## Evaluacion
 

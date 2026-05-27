@@ -1,0 +1,2980 @@
+{
+  "image_metadata": {
+    "width": 1106,
+    "height": 334,
+    "channels": 3
+  },
+  "layout": {
+    "plot_area": {
+      "x": 143,
+      "y": 36,
+      "width": 884,
+      "height": 227
+    },
+    "x_axis_roi": {
+      "x": 143,
+      "y": 263,
+      "width": 884,
+      "height": 60
+    },
+    "y_axis_roi": {
+      "x": 11,
+      "y": 36,
+      "width": 132,
+      "height": 227
+    }
+  },
+  "axis_anchors": [
+    {
+      "axis": "x",
+      "pixel": 150.0,
+      "value": "2025-06-10",
+      "text": "10/06/2025",
+      "confidence": 1.0
+    },
+    {
+      "axis": "x",
+      "pixel": 246.0,
+      "value": "2025-07-19",
+      "text": "19/07/2025",
+      "confidence": 1.0
+    },
+    {
+      "axis": "x",
+      "pixel": 342.0,
+      "value": "2025-08-27",
+      "text": "27/08/2025",
+      "confidence": 1.0
+    },
+    {
+      "axis": "x",
+      "pixel": 437.0,
+      "value": "2025-10-05",
+      "text": "05/10/2025",
+      "confidence": 1.0
+    },
+    {
+      "axis": "x",
+      "pixel": 533.0,
+      "value": "2025-11-13",
+      "text": "13/11/2025",
+      "confidence": 1.0
+    },
+    {
+      "axis": "x",
+      "pixel": 628.0,
+      "value": "2025-12-22",
+      "text": "22/12/2025",
+      "confidence": 1.0
+    },
+    {
+      "axis": "x",
+      "pixel": 724.0,
+      "value": "2026-01-30",
+      "text": "30/01/2026",
+      "confidence": 1.0
+    },
+    {
+      "axis": "x",
+      "pixel": 819.0,
+      "value": "2026-03-10",
+      "text": "10/03/2026",
+      "confidence": 1.0
+    },
+    {
+      "axis": "x",
+      "pixel": 915.0,
+      "value": "2026-04-18",
+      "text": "18/04/2026",
+      "confidence": 1.0
+    },
+    {
+      "axis": "x",
+      "pixel": 1010.0,
+      "value": "2026-05-27",
+      "text": "27/05/2026",
+      "confidence": 1.0
+    },
+    {
+      "axis": "y",
+      "pixel": 289.0,
+      "value": 0.0,
+      "text": "0,00 EUR",
+      "confidence": 1.0
+    },
+    {
+      "axis": "y",
+      "pixel": 224.0,
+      "value": 70.0,
+      "text": "70,00 EUR",
+      "confidence": 1.0
+    },
+    {
+      "axis": "y",
+      "pixel": 159.0,
+      "value": 140.0,
+      "text": "140,00 EUR",
+      "confidence": 1.0
+    },
+    {
+      "axis": "y",
+      "pixel": 94.0,
+      "value": 210.0,
+      "text": "210,00 EUR",
+      "confidence": 1.0
+    },
+    {
+      "axis": "y",
+      "pixel": 29.0,
+      "value": 280.0,
+      "text": "280,00 EUR",
+      "confidence": 1.0
+    }
+  ],
+  "ocr_results": [
+    {
+      "text": "10/06/2025",
+      "confidence": 1.0,
+      "box": {
+        "x": 147,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "19/07/2025",
+      "confidence": 1.0,
+      "box": {
+        "x": 243,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "27/08/2025",
+      "confidence": 1.0,
+      "box": {
+        "x": 339,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "05/10/2025",
+      "confidence": 1.0,
+      "box": {
+        "x": 434,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "13/11/2025",
+      "confidence": 1.0,
+      "box": {
+        "x": 530,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "22/12/2025",
+      "confidence": 1.0,
+      "box": {
+        "x": 625,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "30/01/2026",
+      "confidence": 1.0,
+      "box": {
+        "x": 721,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "10/03/2026",
+      "confidence": 1.0,
+      "box": {
+        "x": 816,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "18/04/2026",
+      "confidence": 1.0,
+      "box": {
+        "x": 912,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "27/05/2026",
+      "confidence": 1.0,
+      "box": {
+        "x": 1007,
+        "y": 299,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "x",
+      "source": "manual"
+    },
+    {
+      "text": "0,00 EUR",
+      "confidence": 1.0,
+      "box": {
+        "x": 96,
+        "y": 286,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "y",
+      "source": "manual"
+    },
+    {
+      "text": "70,00 EUR",
+      "confidence": 1.0,
+      "box": {
+        "x": 96,
+        "y": 221,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "y",
+      "source": "manual"
+    },
+    {
+      "text": "140,00 EUR",
+      "confidence": 1.0,
+      "box": {
+        "x": 96,
+        "y": 156,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "y",
+      "source": "manual"
+    },
+    {
+      "text": "210,00 EUR",
+      "confidence": 1.0,
+      "box": {
+        "x": 96,
+        "y": 91,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "y",
+      "source": "manual"
+    },
+    {
+      "text": "280,00 EUR",
+      "confidence": 1.0,
+      "box": {
+        "x": 96,
+        "y": 26,
+        "width": 6,
+        "height": 6
+      },
+      "axis": "y",
+      "source": "manual"
+    }
+  ],
+  "rejected_ocr": [],
+  "ocr_baselines": {
+    "manual": [
+      {
+        "text": "10/06/2025",
+        "confidence": 1.0,
+        "box": {
+          "x": 147,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "19/07/2025",
+        "confidence": 1.0,
+        "box": {
+          "x": 243,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "27/08/2025",
+        "confidence": 1.0,
+        "box": {
+          "x": 339,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "05/10/2025",
+        "confidence": 1.0,
+        "box": {
+          "x": 434,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "13/11/2025",
+        "confidence": 1.0,
+        "box": {
+          "x": 530,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "22/12/2025",
+        "confidence": 1.0,
+        "box": {
+          "x": 625,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "30/01/2026",
+        "confidence": 1.0,
+        "box": {
+          "x": 721,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "10/03/2026",
+        "confidence": 1.0,
+        "box": {
+          "x": 816,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "18/04/2026",
+        "confidence": 1.0,
+        "box": {
+          "x": 912,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "27/05/2026",
+        "confidence": 1.0,
+        "box": {
+          "x": 1007,
+          "y": 299,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "x",
+        "source": "manual"
+      },
+      {
+        "text": "0,00 EUR",
+        "confidence": 1.0,
+        "box": {
+          "x": 96,
+          "y": 286,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "y",
+        "source": "manual"
+      },
+      {
+        "text": "70,00 EUR",
+        "confidence": 1.0,
+        "box": {
+          "x": 96,
+          "y": 221,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "y",
+        "source": "manual"
+      },
+      {
+        "text": "140,00 EUR",
+        "confidence": 1.0,
+        "box": {
+          "x": 96,
+          "y": 156,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "y",
+        "source": "manual"
+      },
+      {
+        "text": "210,00 EUR",
+        "confidence": 1.0,
+        "box": {
+          "x": 96,
+          "y": 91,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "y",
+        "source": "manual"
+      },
+      {
+        "text": "280,00 EUR",
+        "confidence": 1.0,
+        "box": {
+          "x": 96,
+          "y": 26,
+          "width": 6,
+          "height": 6
+        },
+        "axis": "y",
+        "source": "manual"
+      }
+    ]
+  },
+  "signal_points": 859,
+  "reconstructed_series": [
+    {
+      "date": "2025-06-07",
+      "price": 39.846154,
+      "pixel_x": 143,
+      "pixel_y": 252.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-08",
+      "price": 40.384615,
+      "pixel_x": 145,
+      "pixel_y": 251.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-06-09",
+      "price": 39.846154,
+      "pixel_x": 147,
+      "pixel_y": 252.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-10",
+      "price": 39.846154,
+      "pixel_x": 150,
+      "pixel_y": 252.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-11",
+      "price": 39.846154,
+      "pixel_x": 152,
+      "pixel_y": 252.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-12",
+      "price": 39.846154,
+      "pixel_x": 155,
+      "pixel_y": 252.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-13",
+      "price": 39.846154,
+      "pixel_x": 157,
+      "pixel_y": 252.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-14",
+      "price": 42.0,
+      "pixel_x": 160,
+      "pixel_y": 250.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-15",
+      "price": 43.076923,
+      "pixel_x": 162,
+      "pixel_y": 249.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-16",
+      "price": 43.076923,
+      "pixel_x": 164,
+      "pixel_y": 249.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-17",
+      "price": 43.615385,
+      "pixel_x": 167,
+      "pixel_y": 248.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-06-18",
+      "price": 44.692308,
+      "pixel_x": 169,
+      "pixel_y": 247.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-06-19",
+      "price": 46.307692,
+      "pixel_x": 172,
+      "pixel_y": 246.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-20",
+      "price": 47.384615,
+      "pixel_x": 174,
+      "pixel_y": 245.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-21",
+      "price": 47.923077,
+      "pixel_x": 177,
+      "pixel_y": 244.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-06-22",
+      "price": 49.0,
+      "pixel_x": 179,
+      "pixel_y": 243.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-06-23",
+      "price": 50.076923,
+      "pixel_x": 182,
+      "pixel_y": 242.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-06-24",
+      "price": 52.230769,
+      "pixel_x": 184,
+      "pixel_y": 240.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-06-25",
+      "price": 53.307692,
+      "pixel_x": 186,
+      "pixel_y": 239.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-06-26",
+      "price": 53.846154,
+      "pixel_x": 189,
+      "pixel_y": 239.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-27",
+      "price": 53.846154,
+      "pixel_x": 191,
+      "pixel_y": 239.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-28",
+      "price": 53.846154,
+      "pixel_x": 194,
+      "pixel_y": 239.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-06-29",
+      "price": 55.461538,
+      "pixel_x": 196,
+      "pixel_y": 237.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-06-30",
+      "price": 54.384615,
+      "pixel_x": 199,
+      "pixel_y": 238.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-01",
+      "price": 53.307692,
+      "pixel_x": 201,
+      "pixel_y": 239.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-02",
+      "price": 51.153846,
+      "pixel_x": 204,
+      "pixel_y": 241.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-03",
+      "price": 49.538462,
+      "pixel_x": 206,
+      "pixel_y": 243.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-07-04",
+      "price": 48.461538,
+      "pixel_x": 209,
+      "pixel_y": 244.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-07-05",
+      "price": 47.923077,
+      "pixel_x": 211,
+      "pixel_y": 244.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-06",
+      "price": 46.846154,
+      "pixel_x": 213,
+      "pixel_y": 245.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-07",
+      "price": 44.692308,
+      "pixel_x": 216,
+      "pixel_y": 247.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-08",
+      "price": 44.692308,
+      "pixel_x": 218,
+      "pixel_y": 247.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-09",
+      "price": 45.769231,
+      "pixel_x": 221,
+      "pixel_y": 246.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-10",
+      "price": 47.923077,
+      "pixel_x": 223,
+      "pixel_y": 244.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-11",
+      "price": 47.923077,
+      "pixel_x": 226,
+      "pixel_y": 244.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-12",
+      "price": 49.0,
+      "pixel_x": 228,
+      "pixel_y": 243.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-07-13",
+      "price": 47.923077,
+      "pixel_x": 231,
+      "pixel_y": 244.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-07-14",
+      "price": 49.538462,
+      "pixel_x": 233,
+      "pixel_y": 243.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-07-15",
+      "price": 48.461538,
+      "pixel_x": 235,
+      "pixel_y": 244.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-07-16",
+      "price": 47.923077,
+      "pixel_x": 238,
+      "pixel_y": 244.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-17",
+      "price": 46.846154,
+      "pixel_x": 240,
+      "pixel_y": 245.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-18",
+      "price": 45.230769,
+      "pixel_x": 243,
+      "pixel_y": 247.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-07-19",
+      "price": 45.230769,
+      "pixel_x": 245,
+      "pixel_y": 247.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-07-20",
+      "price": 44.153846,
+      "pixel_x": 248,
+      "pixel_y": 248.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-07-21",
+      "price": 42.0,
+      "pixel_x": 250,
+      "pixel_y": 250.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-07-22",
+      "price": 42.0,
+      "pixel_x": 253,
+      "pixel_y": 250.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-07-23",
+      "price": 42.0,
+      "pixel_x": 255,
+      "pixel_y": 250.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-07-24",
+      "price": 42.538462,
+      "pixel_x": 258,
+      "pixel_y": 249.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-25",
+      "price": 43.615385,
+      "pixel_x": 260,
+      "pixel_y": 248.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-07-26",
+      "price": 45.230769,
+      "pixel_x": 262,
+      "pixel_y": 247.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-07-27",
+      "price": 47.384615,
+      "pixel_x": 265,
+      "pixel_y": 245.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-07-28",
+      "price": 50.076923,
+      "pixel_x": 267,
+      "pixel_y": 242.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-07-29",
+      "price": 54.923077,
+      "pixel_x": 270,
+      "pixel_y": 238.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-07-30",
+      "price": 60.846154,
+      "pixel_x": 272,
+      "pixel_y": 232.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-07-31",
+      "price": 67.307692,
+      "pixel_x": 275,
+      "pixel_y": 226.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-08-01",
+      "price": 64.615385,
+      "pixel_x": 277,
+      "pixel_y": 229.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-08-02",
+      "price": 60.846154,
+      "pixel_x": 280,
+      "pixel_y": 232.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-08-03",
+      "price": 61.923077,
+      "pixel_x": 282,
+      "pixel_y": 231.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-08-04",
+      "price": 61.384615,
+      "pixel_x": 284,
+      "pixel_y": 232.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-08-05",
+      "price": 61.384615,
+      "pixel_x": 287,
+      "pixel_y": 232.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-08-06",
+      "price": 60.846154,
+      "pixel_x": 289,
+      "pixel_y": 232.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-08-07",
+      "price": 61.923077,
+      "pixel_x": 292,
+      "pixel_y": 231.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-08",
+      "price": 63.0,
+      "pixel_x": 294,
+      "pixel_y": 230.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-09",
+      "price": 61.384615,
+      "pixel_x": 297,
+      "pixel_y": 232.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-08-10",
+      "price": 60.307692,
+      "pixel_x": 299,
+      "pixel_y": 233.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-08-11",
+      "price": 58.692308,
+      "pixel_x": 302,
+      "pixel_y": 234.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-12",
+      "price": 57.615385,
+      "pixel_x": 304,
+      "pixel_y": 235.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-13",
+      "price": 58.692308,
+      "pixel_x": 307,
+      "pixel_y": 234.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-14",
+      "price": 60.846154,
+      "pixel_x": 309,
+      "pixel_y": 232.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-15",
+      "price": 63.0,
+      "pixel_x": 311,
+      "pixel_y": 230.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-16",
+      "price": 63.0,
+      "pixel_x": 314,
+      "pixel_y": 230.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-17",
+      "price": 63.0,
+      "pixel_x": 316,
+      "pixel_y": 230.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-18",
+      "price": 65.692308,
+      "pixel_x": 319,
+      "pixel_y": 228.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-08-19",
+      "price": 68.923077,
+      "pixel_x": 321,
+      "pixel_y": 225.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-08-20",
+      "price": 72.153846,
+      "pixel_x": 324,
+      "pixel_y": 222.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-08-21",
+      "price": 72.153846,
+      "pixel_x": 326,
+      "pixel_y": 222.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-08-22",
+      "price": 72.692308,
+      "pixel_x": 329,
+      "pixel_y": 221.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-23",
+      "price": 73.230769,
+      "pixel_x": 331,
+      "pixel_y": 221.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-08-24",
+      "price": 71.076923,
+      "pixel_x": 333,
+      "pixel_y": 223.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-08-25",
+      "price": 71.076923,
+      "pixel_x": 336,
+      "pixel_y": 223.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-08-26",
+      "price": 71.615385,
+      "pixel_x": 338,
+      "pixel_y": 222.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-27",
+      "price": 75.384615,
+      "pixel_x": 341,
+      "pixel_y": 219.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-08-28",
+      "price": 74.846154,
+      "pixel_x": 343,
+      "pixel_y": 219.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-29",
+      "price": 74.846154,
+      "pixel_x": 346,
+      "pixel_y": 219.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-30",
+      "price": 73.769231,
+      "pixel_x": 348,
+      "pixel_y": 220.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-08-31",
+      "price": 73.230769,
+      "pixel_x": 351,
+      "pixel_y": 221.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-09-01",
+      "price": 72.692308,
+      "pixel_x": 353,
+      "pixel_y": 221.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-09-02",
+      "price": 76.461538,
+      "pixel_x": 356,
+      "pixel_y": 218.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-09-03",
+      "price": 80.769231,
+      "pixel_x": 358,
+      "pixel_y": 214.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-09-04",
+      "price": 84.0,
+      "pixel_x": 360,
+      "pixel_y": 211.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-09-05",
+      "price": 86.153846,
+      "pixel_x": 363,
+      "pixel_y": 209.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2025-09-06",
+      "price": 88.307692,
+      "pixel_x": 365,
+      "pixel_y": 207.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-09-07",
+      "price": 96.384615,
+      "pixel_x": 368,
+      "pixel_y": 199.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-09-08",
+      "price": 104.461538,
+      "pixel_x": 370,
+      "pixel_y": 192.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-09-09",
+      "price": 112.538462,
+      "pixel_x": 373,
+      "pixel_y": 184.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-09-10",
+      "price": 115.230769,
+      "pixel_x": 375,
+      "pixel_y": 182.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-09-11",
+      "price": 110.923077,
+      "pixel_x": 378,
+      "pixel_y": 186.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-09-12",
+      "price": 103.384615,
+      "pixel_x": 380,
+      "pixel_y": 193.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-09-13",
+      "price": 95.307692,
+      "pixel_x": 382,
+      "pixel_y": 200.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-09-14",
+      "price": 84.0,
+      "pixel_x": 385,
+      "pixel_y": 211.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-09-15",
+      "price": 79.692308,
+      "pixel_x": 387,
+      "pixel_y": 215.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-09-16",
+      "price": 75.923077,
+      "pixel_x": 390,
+      "pixel_y": 218.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-09-17",
+      "price": 77.0,
+      "pixel_x": 392,
+      "pixel_y": 217.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-09-18",
+      "price": 75.923077,
+      "pixel_x": 395,
+      "pixel_y": 218.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-09-19",
+      "price": 75.923077,
+      "pixel_x": 397,
+      "pixel_y": 218.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-09-20",
+      "price": 77.0,
+      "pixel_x": 400,
+      "pixel_y": 217.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-09-21",
+      "price": 79.153846,
+      "pixel_x": 402,
+      "pixel_y": 215.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-09-22",
+      "price": 77.0,
+      "pixel_x": 405,
+      "pixel_y": 217.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-09-23",
+      "price": 74.846154,
+      "pixel_x": 407,
+      "pixel_y": 219.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-09-24",
+      "price": 73.769231,
+      "pixel_x": 409,
+      "pixel_y": 220.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-09-25",
+      "price": 75.923077,
+      "pixel_x": 412,
+      "pixel_y": 218.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-09-26",
+      "price": 84.0,
+      "pixel_x": 414,
+      "pixel_y": 211.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-09-27",
+      "price": 95.846154,
+      "pixel_x": 417,
+      "pixel_y": 200.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-09-28",
+      "price": 101.230769,
+      "pixel_x": 419,
+      "pixel_y": 195.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-09-29",
+      "price": 102.307692,
+      "pixel_x": 422,
+      "pixel_y": 194.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-09-30",
+      "price": 99.076923,
+      "pixel_x": 424,
+      "pixel_y": 197.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-10-01",
+      "price": 99.615385,
+      "pixel_x": 427,
+      "pixel_y": 196.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-10-02",
+      "price": 103.923077,
+      "pixel_x": 429,
+      "pixel_y": 192.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-10-03",
+      "price": 108.769231,
+      "pixel_x": 431,
+      "pixel_y": 188.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-10-04",
+      "price": 115.230769,
+      "pixel_x": 434,
+      "pixel_y": 182.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-10-05",
+      "price": 115.769231,
+      "pixel_x": 436,
+      "pixel_y": 181.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-10-06",
+      "price": 120.076923,
+      "pixel_x": 439,
+      "pixel_y": 177.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-10-07",
+      "price": 124.384615,
+      "pixel_x": 441,
+      "pixel_y": 173.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-10-08",
+      "price": 130.307692,
+      "pixel_x": 444,
+      "pixel_y": 168.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-10-09",
+      "price": 131.923077,
+      "pixel_x": 446,
+      "pixel_y": 166.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-10-10",
+      "price": 128.692308,
+      "pixel_x": 449,
+      "pixel_y": 169.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-10-11",
+      "price": 127.615385,
+      "pixel_x": 451,
+      "pixel_y": 170.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-10-12",
+      "price": 129.769231,
+      "pixel_x": 454,
+      "pixel_y": 168.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-10-13",
+      "price": 126.538462,
+      "pixel_x": 456,
+      "pixel_y": 171.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-10-14",
+      "price": 121.692308,
+      "pixel_x": 458,
+      "pixel_y": 176.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-10-15",
+      "price": 114.692308,
+      "pixel_x": 461,
+      "pixel_y": 182.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-10-16",
+      "price": 109.846154,
+      "pixel_x": 463,
+      "pixel_y": 187.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-10-17",
+      "price": 110.384615,
+      "pixel_x": 466,
+      "pixel_y": 186.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-10-18",
+      "price": 109.307692,
+      "pixel_x": 468,
+      "pixel_y": 187.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-10-19",
+      "price": 103.923077,
+      "pixel_x": 471,
+      "pixel_y": 192.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-10-20",
+      "price": 103.923077,
+      "pixel_x": 473,
+      "pixel_y": 192.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-10-21",
+      "price": 107.692308,
+      "pixel_x": 476,
+      "pixel_y": 189.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-10-22",
+      "price": 108.769231,
+      "pixel_x": 478,
+      "pixel_y": 188.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-10-23",
+      "price": 100.153846,
+      "pixel_x": 480,
+      "pixel_y": 196.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-10-24",
+      "price": 93.153846,
+      "pixel_x": 483,
+      "pixel_y": 202.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-10-25",
+      "price": 95.846154,
+      "pixel_x": 485,
+      "pixel_y": 200.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-10-26",
+      "price": 103.923077,
+      "pixel_x": 488,
+      "pixel_y": 192.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-10-27",
+      "price": 103.923077,
+      "pixel_x": 490,
+      "pixel_y": 192.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-10-28",
+      "price": 100.153846,
+      "pixel_x": 493,
+      "pixel_y": 196.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-10-29",
+      "price": 99.615385,
+      "pixel_x": 495,
+      "pixel_y": 196.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-10-30",
+      "price": 109.846154,
+      "pixel_x": 498,
+      "pixel_y": 187.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-10-31",
+      "price": 119.0,
+      "pixel_x": 500,
+      "pixel_y": 178.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-01",
+      "price": 130.846154,
+      "pixel_x": 503,
+      "pixel_y": 167.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-02",
+      "price": 138.384615,
+      "pixel_x": 505,
+      "pixel_y": 160.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-03",
+      "price": 143.769231,
+      "pixel_x": 507,
+      "pixel_y": 155.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-11-04",
+      "price": 145.384615,
+      "pixel_x": 510,
+      "pixel_y": 154.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-11-05",
+      "price": 153.461538,
+      "pixel_x": 512,
+      "pixel_y": 146.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-06",
+      "price": 157.769231,
+      "pixel_x": 515,
+      "pixel_y": 142.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-07",
+      "price": 148.615385,
+      "pixel_x": 517,
+      "pixel_y": 151.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-08",
+      "price": 143.769231,
+      "pixel_x": 520,
+      "pixel_y": 155.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-09",
+      "price": 143.769231,
+      "pixel_x": 522,
+      "pixel_y": 155.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-10",
+      "price": 160.461538,
+      "pixel_x": 525,
+      "pixel_y": 140.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-11",
+      "price": 171.230769,
+      "pixel_x": 527,
+      "pixel_y": 130.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-12",
+      "price": 182.0,
+      "pixel_x": 529,
+      "pixel_y": 120.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-13",
+      "price": 190.615385,
+      "pixel_x": 532,
+      "pixel_y": 112.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-11-14",
+      "price": 190.615385,
+      "pixel_x": 534,
+      "pixel_y": 112.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-11-15",
+      "price": 196.0,
+      "pixel_x": 537,
+      "pixel_y": 107.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-16",
+      "price": 210.538462,
+      "pixel_x": 539,
+      "pixel_y": 93.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-17",
+      "price": 231.538462,
+      "pixel_x": 542,
+      "pixel_y": 74.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-18",
+      "price": 233.692308,
+      "pixel_x": 544,
+      "pixel_y": 72.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-19",
+      "price": 239.076923,
+      "pixel_x": 547,
+      "pixel_y": 67.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-11-20",
+      "price": 246.076923,
+      "pixel_x": 549,
+      "pixel_y": 60.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-21",
+      "price": 262.230769,
+      "pixel_x": 552,
+      "pixel_y": 45.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-22",
+      "price": 262.230769,
+      "pixel_x": 554,
+      "pixel_y": 45.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-23",
+      "price": 258.461538,
+      "pixel_x": 556,
+      "pixel_y": 49.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-24",
+      "price": 266.538462,
+      "pixel_x": 559,
+      "pixel_y": 41.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-11-25",
+      "price": 272.461538,
+      "pixel_x": 561,
+      "pixel_y": 36.0,
+      "confidence": 0.11013215859030837
+    },
+    {
+      "date": "2025-11-28",
+      "price": 270.846154,
+      "pixel_x": 569,
+      "pixel_y": 37.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-11-29",
+      "price": 269.769231,
+      "pixel_x": 571,
+      "pixel_y": 38.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-11-30",
+      "price": 263.846154,
+      "pixel_x": 574,
+      "pixel_y": 44.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-01",
+      "price": 262.230769,
+      "pixel_x": 576,
+      "pixel_y": 45.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-02",
+      "price": 264.384615,
+      "pixel_x": 578,
+      "pixel_y": 43.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-12-03",
+      "price": 262.230769,
+      "pixel_x": 581,
+      "pixel_y": 45.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-12-04",
+      "price": 253.615385,
+      "pixel_x": 583,
+      "pixel_y": 53.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-05",
+      "price": 227.230769,
+      "pixel_x": 586,
+      "pixel_y": 78.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-06",
+      "price": 213.230769,
+      "pixel_x": 588,
+      "pixel_y": 91.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-07",
+      "price": 212.692308,
+      "pixel_x": 591,
+      "pixel_y": 91.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-12-08",
+      "price": 215.384615,
+      "pixel_x": 593,
+      "pixel_y": 89.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-12-09",
+      "price": 216.461538,
+      "pixel_x": 596,
+      "pixel_y": 88.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-12-10",
+      "price": 212.692308,
+      "pixel_x": 598,
+      "pixel_y": 91.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-12-11",
+      "price": 207.846154,
+      "pixel_x": 600,
+      "pixel_y": 96.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-12-12",
+      "price": 198.692308,
+      "pixel_x": 603,
+      "pixel_y": 104.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-13",
+      "price": 191.153846,
+      "pixel_x": 605,
+      "pixel_y": 111.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-14",
+      "price": 182.538462,
+      "pixel_x": 608,
+      "pixel_y": 119.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-12-15",
+      "price": 178.769231,
+      "pixel_x": 610,
+      "pixel_y": 123.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-12-16",
+      "price": 178.230769,
+      "pixel_x": 613,
+      "pixel_y": 123.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-17",
+      "price": 182.538462,
+      "pixel_x": 615,
+      "pixel_y": 119.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-18",
+      "price": 191.692308,
+      "pixel_x": 618,
+      "pixel_y": 111.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-19",
+      "price": 197.076923,
+      "pixel_x": 620,
+      "pixel_y": 106.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-12-20",
+      "price": 204.076923,
+      "pixel_x": 623,
+      "pixel_y": 99.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2025-12-21",
+      "price": 204.615385,
+      "pixel_x": 625,
+      "pixel_y": 99.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2025-12-22",
+      "price": 199.769231,
+      "pixel_x": 627,
+      "pixel_y": 103.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-23",
+      "price": 190.076923,
+      "pixel_x": 630,
+      "pixel_y": 112.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2025-12-24",
+      "price": 184.153846,
+      "pixel_x": 632,
+      "pixel_y": 118.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-12-25",
+      "price": 180.384615,
+      "pixel_x": 635,
+      "pixel_y": 121.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-12-26",
+      "price": 181.461538,
+      "pixel_x": 637,
+      "pixel_y": 120.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2025-12-27",
+      "price": 177.692308,
+      "pixel_x": 640,
+      "pixel_y": 124.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-12-28",
+      "price": 174.461538,
+      "pixel_x": 642,
+      "pixel_y": 127.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2025-12-29",
+      "price": 177.153846,
+      "pixel_x": 645,
+      "pixel_y": 124.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2025-12-30",
+      "price": 178.769231,
+      "pixel_x": 647,
+      "pixel_y": 123.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2025-12-31",
+      "price": 180.923077,
+      "pixel_x": 649,
+      "pixel_y": 121.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-01-01",
+      "price": 181.461538,
+      "pixel_x": 652,
+      "pixel_y": 120.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-01-02",
+      "price": 181.461538,
+      "pixel_x": 654,
+      "pixel_y": 120.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-01-03",
+      "price": 184.692308,
+      "pixel_x": 657,
+      "pixel_y": 117.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-01-04",
+      "price": 191.153846,
+      "pixel_x": 659,
+      "pixel_y": 111.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-01-05",
+      "price": 196.538462,
+      "pixel_x": 662,
+      "pixel_y": 106.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-01-06",
+      "price": 196.538462,
+      "pixel_x": 664,
+      "pixel_y": 106.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-01-07",
+      "price": 200.307692,
+      "pixel_x": 667,
+      "pixel_y": 103.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-01-08",
+      "price": 201.384615,
+      "pixel_x": 669,
+      "pixel_y": 102.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-01-09",
+      "price": 203.538462,
+      "pixel_x": 672,
+      "pixel_y": 100.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2026-01-10",
+      "price": 194.923077,
+      "pixel_x": 674,
+      "pixel_y": 108.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-01-11",
+      "price": 187.923077,
+      "pixel_x": 676,
+      "pixel_y": 114.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-01-12",
+      "price": 185.769231,
+      "pixel_x": 679,
+      "pixel_y": 116.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-01-13",
+      "price": 188.461538,
+      "pixel_x": 681,
+      "pixel_y": 114.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-01-14",
+      "price": 191.692308,
+      "pixel_x": 684,
+      "pixel_y": 111.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-01-15",
+      "price": 192.769231,
+      "pixel_x": 686,
+      "pixel_y": 110.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-01-16",
+      "price": 185.230769,
+      "pixel_x": 689,
+      "pixel_y": 117.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-01-17",
+      "price": 177.153846,
+      "pixel_x": 691,
+      "pixel_y": 124.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-01-18",
+      "price": 179.846154,
+      "pixel_x": 694,
+      "pixel_y": 122.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-01-19",
+      "price": 182.538462,
+      "pixel_x": 696,
+      "pixel_y": 119.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-01-20",
+      "price": 183.076923,
+      "pixel_x": 698,
+      "pixel_y": 119.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2026-01-21",
+      "price": 182.538462,
+      "pixel_x": 701,
+      "pixel_y": 119.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-01-22",
+      "price": 179.846154,
+      "pixel_x": 703,
+      "pixel_y": 122.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-01-23",
+      "price": 170.692308,
+      "pixel_x": 706,
+      "pixel_y": 130.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-01-24",
+      "price": 165.846154,
+      "pixel_x": 708,
+      "pixel_y": 135.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-01-25",
+      "price": 163.692308,
+      "pixel_x": 711,
+      "pixel_y": 137.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2026-01-26",
+      "price": 163.692308,
+      "pixel_x": 713,
+      "pixel_y": 137.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2026-01-27",
+      "price": 164.769231,
+      "pixel_x": 716,
+      "pixel_y": 136.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-01-28",
+      "price": 165.307692,
+      "pixel_x": 718,
+      "pixel_y": 135.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-01-29",
+      "price": 167.461538,
+      "pixel_x": 721,
+      "pixel_y": 133.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-01-30",
+      "price": 174.461538,
+      "pixel_x": 723,
+      "pixel_y": 127.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-01-31",
+      "price": 177.692308,
+      "pixel_x": 725,
+      "pixel_y": 124.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-01",
+      "price": 177.153846,
+      "pixel_x": 728,
+      "pixel_y": 124.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-02",
+      "price": 181.461538,
+      "pixel_x": 730,
+      "pixel_y": 120.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-03",
+      "price": 177.153846,
+      "pixel_x": 733,
+      "pixel_y": 124.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-02-04",
+      "price": 175.0,
+      "pixel_x": 735,
+      "pixel_y": 126.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-02-05",
+      "price": 178.769231,
+      "pixel_x": 738,
+      "pixel_y": 123.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-02-06",
+      "price": 181.461538,
+      "pixel_x": 740,
+      "pixel_y": 120.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-02-07",
+      "price": 177.692308,
+      "pixel_x": 743,
+      "pixel_y": 124.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-08",
+      "price": 170.153846,
+      "pixel_x": 745,
+      "pixel_y": 131.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-09",
+      "price": 165.846154,
+      "pixel_x": 747,
+      "pixel_y": 135.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-02-10",
+      "price": 167.461538,
+      "pixel_x": 750,
+      "pixel_y": 133.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-02-11",
+      "price": 169.615385,
+      "pixel_x": 752,
+      "pixel_y": 131.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-02-12",
+      "price": 177.153846,
+      "pixel_x": 755,
+      "pixel_y": 124.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-13",
+      "price": 181.461538,
+      "pixel_x": 757,
+      "pixel_y": 120.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-02-14",
+      "price": 183.076923,
+      "pixel_x": 760,
+      "pixel_y": 119.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2026-02-15",
+      "price": 183.076923,
+      "pixel_x": 762,
+      "pixel_y": 119.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2026-02-16",
+      "price": 183.615385,
+      "pixel_x": 765,
+      "pixel_y": 118.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-02-17",
+      "price": 189.538462,
+      "pixel_x": 767,
+      "pixel_y": 113.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-18",
+      "price": 190.076923,
+      "pixel_x": 770,
+      "pixel_y": 112.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-19",
+      "price": 177.692308,
+      "pixel_x": 772,
+      "pixel_y": 124.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-20",
+      "price": 175.0,
+      "pixel_x": 774,
+      "pixel_y": 126.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-21",
+      "price": 181.461538,
+      "pixel_x": 777,
+      "pixel_y": 120.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-02-22",
+      "price": 182.538462,
+      "pixel_x": 779,
+      "pixel_y": 119.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-02-23",
+      "price": 181.461538,
+      "pixel_x": 782,
+      "pixel_y": 120.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-02-24",
+      "price": 181.461538,
+      "pixel_x": 784,
+      "pixel_y": 120.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-02-25",
+      "price": 178.230769,
+      "pixel_x": 787,
+      "pixel_y": 123.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-02-26",
+      "price": 176.615385,
+      "pixel_x": 789,
+      "pixel_y": 125.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-02-27",
+      "price": 173.384615,
+      "pixel_x": 792,
+      "pixel_y": 128.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-02-28",
+      "price": 171.769231,
+      "pixel_x": 794,
+      "pixel_y": 129.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-03-01",
+      "price": 170.153846,
+      "pixel_x": 796,
+      "pixel_y": 131.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-03-02",
+      "price": 170.692308,
+      "pixel_x": 799,
+      "pixel_y": 130.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-03-03",
+      "price": 170.153846,
+      "pixel_x": 801,
+      "pixel_y": 131.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-03-04",
+      "price": 171.230769,
+      "pixel_x": 804,
+      "pixel_y": 130.0,
+      "confidence": 0.3303964757709251
+    },
+    {
+      "date": "2026-03-05",
+      "price": 172.846154,
+      "pixel_x": 806,
+      "pixel_y": 128.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-03-06",
+      "price": 178.230769,
+      "pixel_x": 809,
+      "pixel_y": 123.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-03-07",
+      "price": 181.461538,
+      "pixel_x": 811,
+      "pixel_y": 120.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-03-08",
+      "price": 190.615385,
+      "pixel_x": 814,
+      "pixel_y": 112.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-09",
+      "price": 191.153846,
+      "pixel_x": 816,
+      "pixel_y": 111.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-10",
+      "price": 183.076923,
+      "pixel_x": 819,
+      "pixel_y": 119.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-03-11",
+      "price": 178.769231,
+      "pixel_x": 821,
+      "pixel_y": 123.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-12",
+      "price": 174.461538,
+      "pixel_x": 823,
+      "pixel_y": 127.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2026-03-13",
+      "price": 166.923077,
+      "pixel_x": 826,
+      "pixel_y": 134.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-14",
+      "price": 165.846154,
+      "pixel_x": 828,
+      "pixel_y": 135.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-15",
+      "price": 179.846154,
+      "pixel_x": 831,
+      "pixel_y": 122.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-16",
+      "price": 187.923077,
+      "pixel_x": 833,
+      "pixel_y": 114.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-17",
+      "price": 193.307692,
+      "pixel_x": 836,
+      "pixel_y": 109.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-03-18",
+      "price": 199.230769,
+      "pixel_x": 838,
+      "pixel_y": 104.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-19",
+      "price": 201.923077,
+      "pixel_x": 841,
+      "pixel_y": 101.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-20",
+      "price": 195.461538,
+      "pixel_x": 843,
+      "pixel_y": 107.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-21",
+      "price": 187.384615,
+      "pixel_x": 845,
+      "pixel_y": 115.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-22",
+      "price": 179.846154,
+      "pixel_x": 848,
+      "pixel_y": 122.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-03-23",
+      "price": 176.076923,
+      "pixel_x": 850,
+      "pixel_y": 125.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-03-24",
+      "price": 168.538462,
+      "pixel_x": 853,
+      "pixel_y": 132.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-25",
+      "price": 168.538462,
+      "pixel_x": 855,
+      "pixel_y": 132.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-26",
+      "price": 178.769231,
+      "pixel_x": 858,
+      "pixel_y": 123.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-03-27",
+      "price": 177.153846,
+      "pixel_x": 860,
+      "pixel_y": 124.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-03-28",
+      "price": 173.384615,
+      "pixel_x": 863,
+      "pixel_y": 128.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-03-29",
+      "price": 173.384615,
+      "pixel_x": 865,
+      "pixel_y": 128.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-03-30",
+      "price": 171.769231,
+      "pixel_x": 868,
+      "pixel_y": 129.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-03-31",
+      "price": 171.769231,
+      "pixel_x": 870,
+      "pixel_y": 129.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-04-01",
+      "price": 175.0,
+      "pixel_x": 872,
+      "pixel_y": 126.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-04-02",
+      "price": 185.230769,
+      "pixel_x": 875,
+      "pixel_y": 117.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-03",
+      "price": 187.384615,
+      "pixel_x": 877,
+      "pixel_y": 115.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-04",
+      "price": 178.769231,
+      "pixel_x": 880,
+      "pixel_y": 123.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-05",
+      "price": 164.230769,
+      "pixel_x": 882,
+      "pixel_y": 136.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-06",
+      "price": 163.692308,
+      "pixel_x": 885,
+      "pixel_y": 137.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-07",
+      "price": 172.846154,
+      "pixel_x": 887,
+      "pixel_y": 128.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-08",
+      "price": 181.461538,
+      "pixel_x": 890,
+      "pixel_y": 120.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-04-09",
+      "price": 191.692308,
+      "pixel_x": 892,
+      "pixel_y": 111.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-10",
+      "price": 197.076923,
+      "pixel_x": 894,
+      "pixel_y": 106.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-11",
+      "price": 189.538462,
+      "pixel_x": 897,
+      "pixel_y": 113.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-12",
+      "price": 183.076923,
+      "pixel_x": 899,
+      "pixel_y": 119.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2026-04-13",
+      "price": 180.384615,
+      "pixel_x": 902,
+      "pixel_y": 121.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-14",
+      "price": 178.230769,
+      "pixel_x": 904,
+      "pixel_y": 123.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-15",
+      "price": 180.923077,
+      "pixel_x": 907,
+      "pixel_y": 121.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2026-04-16",
+      "price": 178.769231,
+      "pixel_x": 909,
+      "pixel_y": 123.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-04-17",
+      "price": 172.846154,
+      "pixel_x": 912,
+      "pixel_y": 128.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-18",
+      "price": 170.692308,
+      "pixel_x": 914,
+      "pixel_y": 130.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-19",
+      "price": 164.769231,
+      "pixel_x": 917,
+      "pixel_y": 136.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-20",
+      "price": 162.076923,
+      "pixel_x": 919,
+      "pixel_y": 138.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-21",
+      "price": 165.307692,
+      "pixel_x": 921,
+      "pixel_y": 135.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-22",
+      "price": 166.384615,
+      "pixel_x": 924,
+      "pixel_y": 134.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-04-23",
+      "price": 162.076923,
+      "pixel_x": 926,
+      "pixel_y": 138.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-24",
+      "price": 157.230769,
+      "pixel_x": 929,
+      "pixel_y": 143.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2026-04-25",
+      "price": 159.923077,
+      "pixel_x": 931,
+      "pixel_y": 140.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-04-26",
+      "price": 163.153846,
+      "pixel_x": 934,
+      "pixel_y": 137.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-04-27",
+      "price": 163.153846,
+      "pixel_x": 936,
+      "pixel_y": 137.5,
+      "confidence": 0.44052863436123346
+    },
+    {
+      "date": "2026-04-28",
+      "price": 163.692308,
+      "pixel_x": 939,
+      "pixel_y": 137.0,
+      "confidence": 0.5506607929515418
+    },
+    {
+      "date": "2026-04-29",
+      "price": 173.923077,
+      "pixel_x": 941,
+      "pixel_y": 127.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-04-30",
+      "price": 179.846154,
+      "pixel_x": 943,
+      "pixel_y": 122.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-01",
+      "price": 173.384615,
+      "pixel_x": 946,
+      "pixel_y": 128.0,
+      "confidence": 0.9911894273127754
+    },
+    {
+      "date": "2026-05-02",
+      "price": 172.307692,
+      "pixel_x": 948,
+      "pixel_y": 129.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-03",
+      "price": 172.846154,
+      "pixel_x": 951,
+      "pixel_y": 128.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-04",
+      "price": 166.384615,
+      "pixel_x": 953,
+      "pixel_y": 134.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-05",
+      "price": 171.769231,
+      "pixel_x": 956,
+      "pixel_y": 129.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-06",
+      "price": 181.461538,
+      "pixel_x": 958,
+      "pixel_y": 120.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-07",
+      "price": 185.230769,
+      "pixel_x": 961,
+      "pixel_y": 117.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-08",
+      "price": 176.076923,
+      "pixel_x": 963,
+      "pixel_y": 125.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-09",
+      "price": 162.615385,
+      "pixel_x": 966,
+      "pixel_y": 138.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-10",
+      "price": 163.153846,
+      "pixel_x": 968,
+      "pixel_y": 137.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-11",
+      "price": 159.923077,
+      "pixel_x": 970,
+      "pixel_y": 140.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-05-12",
+      "price": 161.0,
+      "pixel_x": 973,
+      "pixel_y": 139.5,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-13",
+      "price": 163.692308,
+      "pixel_x": 975,
+      "pixel_y": 137.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-14",
+      "price": 159.384615,
+      "pixel_x": 978,
+      "pixel_y": 141.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-05-15",
+      "price": 155.615385,
+      "pixel_x": 980,
+      "pixel_y": 144.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-05-16",
+      "price": 151.307692,
+      "pixel_x": 983,
+      "pixel_y": 148.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-05-17",
+      "price": 148.076923,
+      "pixel_x": 985,
+      "pixel_y": 151.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-05-18",
+      "price": 142.153846,
+      "pixel_x": 988,
+      "pixel_y": 157.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-05-19",
+      "price": 140.538462,
+      "pixel_x": 990,
+      "pixel_y": 158.5,
+      "confidence": 0.6607929515418502
+    },
+    {
+      "date": "2026-05-20",
+      "price": 140.0,
+      "pixel_x": 992,
+      "pixel_y": 159.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-05-21",
+      "price": 134.076923,
+      "pixel_x": 995,
+      "pixel_y": 164.5,
+      "confidence": 0.8810572687224669
+    },
+    {
+      "date": "2026-05-22",
+      "price": 132.461538,
+      "pixel_x": 997,
+      "pixel_y": 166.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-05-23",
+      "price": 135.692308,
+      "pixel_x": 1000,
+      "pixel_y": 163.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-05-24",
+      "price": 136.769231,
+      "pixel_x": 1002,
+      "pixel_y": 162.0,
+      "confidence": 0.7709251101321586
+    },
+    {
+      "date": "2026-05-25",
+      "price": 131.384615,
+      "pixel_x": 1005,
+      "pixel_y": 167.0,
+      "confidence": 1.0
+    },
+    {
+      "date": "2026-05-26",
+      "price": 127.615385,
+      "pixel_x": 1007,
+      "pixel_y": 170.5,
+      "confidence": 0.44052863436123346
+    }
+  ],
+  "metrics": {
+    "series": {
+      "series_points": 352,
+      "truth_points": 1,
+      "overlap_points": 1,
+      "mae": 2.1253850000000085,
+      "rmse": 2.1253850000000085,
+      "mse": 4.5172613982250365
+    },
+    "ocr": {},
+    "processed": true
+  }
+}

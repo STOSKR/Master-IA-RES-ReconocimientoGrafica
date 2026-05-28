@@ -8,7 +8,7 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
 
-\graphicspath{{outputs/auto_clean_debug/}{../outputs/auto_clean_debug/}}
+\graphicspath{{outputs/auto_clean_debug/}{../outputs/auto_clean_debug/}{docs/assets/}{assets/}}
 
 \definecolor{bg}{HTML}{111820}
 \definecolor{ink}{HTML}{F3F7FA}
@@ -80,9 +80,32 @@
 \end{frame}
 
 \begin{frame}{Técnicas implementadas}
-    \begin{center}
-      \Huge\greentext{Visi\'on} + \cyantext{OCR} + \yellowtext{Geometr\'ia} 
-    \end{center}
+  \vspace{0.55cm}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \begin{column}{0.31\textwidth}
+      \begin{center}
+        {\Huge\greentext{Visi\'on}}\\[0.35cm]
+        {\Large OpenCV}\\[0.12cm]
+        {\large\muted{HSV, umbrales, contornos}}
+      \end{center}
+    \end{column}
+
+    \begin{column}{0.31\textwidth}
+      \begin{center}
+        {\Huge\cyantext{OCR}}\\[0.35cm]
+        {\Large PaddleOCR}\\[0.12cm]
+        {\large\muted{detecci\'on y reconocimiento}}
+      \end{center}
+    \end{column}
+
+    \begin{column}{0.31\textwidth}
+      \begin{center}
+        {\Huge\yellowtext{Geometr\'ia}}\\[0.35cm]
+        {\Large NumPy}\\[0.12cm]
+        {\large\muted{interpolaci\'on lineal}}
+      \end{center}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Pipeline}
@@ -130,7 +153,7 @@
     \node[detail] at (2.55,-1.85) {fechas y precios};
 
     \node[label] at (5.10,-1.15) {Se\~nal};
-    \node[detail] at (5.10,-1.85) {linea visual};
+    \node[detail] at (5.10,-1.85) {l\'inea visual};
 
     \node[label] at (7.65,-1.15) {Calibraci\'on};
     \node[detail] at (7.65,-1.85) {pixel a dato};
@@ -145,26 +168,19 @@
 \end{frame}
 
 \begin{frame}{Layout + OCR}
+  \vspace{0.15cm}
+  {\Large\muted{Delimita la zona útil y lee las anclas de escala.}}
+
   \vspace{0.35cm}
-  \begin{columns}[T,totalwidth=\textwidth]
-    \begin{column}{0.60\textwidth}
-      \vspace{0pt}
-      \includegraphics[width=\linewidth]{2-1_debug.png}
-    \end{column}
+  \begin{center}
+    \includegraphics[width=0.80\textwidth]{2-1_debug.png}
+  \end{center}
 
-    \begin{column}{0.34\textwidth}
-      \vspace{0pt}
-      {\Large\greentext{Detecta}}\\[0.28cm]
-      {\large\textcolor{green}{\textbullet}\ Plot area}\\[0.16cm]
-      {\large\textcolor{green}{\textbullet}\ Eje X}\\[0.16cm]
-      {\large\textcolor{green}{\textbullet}\ Eje Y}
-
-      \vspace{0.7cm}
-      {\Large\cyantext{Lee}}\\[0.28cm]
-      {\large\textcolor{green}{\textbullet}\ Fechas}\\[0.16cm]
-      {\large\textcolor{green}{\textbullet}\ Precios}
-    \end{column}
-  \end{columns}
+  \vspace{0.18cm}
+  \begin{center}
+    {\large\greentext{Layout}: plot + ejes \hspace{0.7cm}
+    \cyantext{OCR}: fechas + precios}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Se\~nal visual}
@@ -197,62 +213,24 @@
   {\Large\muted{Las anclas OCR dan la escala real de la gr\'afica.}}
 \end{frame}
 
-\begin{frame}{Batch autom\'atico}
-  \vspace{0.4cm}
-  {\Large Procesa todas las im\'agenes de \texttt{data/raw}.}
+\begin{frame}{Extracci\'on: l\'inea trazada}
+  \vspace{0.25cm}
+  \begin{center}
+    \includegraphics[width=0.98\textwidth]{1-2_debug.png}
 
-  \vspace{0.7cm}
-  {\Large\texttt{python -m recongrafica batch --raw-dir data/raw --use-ocr}}
-
-  \vspace{0.9cm}
-  \begin{columns}[T]
-    \column{0.25\textwidth}
-    {\Huge\greentext{10/10}}\\
-    \muted{procesadas}
-
-    \column{0.25\textwidth}
-    {\Huge\cyantext{4}}\\
-    \muted{salidas por imagen}
-
-    \column{0.25\textwidth}
-    {\Huge\yellowtext{CSV}}\\
-    \muted{listo para ML}
-  \end{columns}
+    \vspace{0.35cm}
+    {\Large\greentext{Se\~nal detectada sobre la gr\'afica original.}}
+  \end{center}
 \end{frame}
 
-\begin{frame}{Resultados auditables}
-  \begin{columns}
-    \column{0.32\textwidth}
-    \includegraphics[width=\linewidth]{1-2_debug.png}\\
-    \greentext{1-2.csv}
+\begin{frame}{Extracci\'on: m\'ascara binaria}
+  \vspace{0.35cm}
+  \begin{center}
+    \includegraphics[width=0.96\textwidth]{1-2_mask.png}
 
-    \column{0.32\textwidth}
-    \includegraphics[width=\linewidth]{2-1_debug.png}\\
-    \cyantext{2-1.csv}
-
-    \column{0.32\textwidth}
-    \includegraphics[width=\linewidth]{2-5_debug.png}\\
-    \yellowtext{2-5.csv}
-  \end{columns}
-
-  \vspace{0.6cm}
-  {\Large Cada salida conserva su imagen de debug.}
-\end{frame}
-
-\begin{frame}{Evaluaci\'on}
-  \vspace{0.5cm}
-  \begin{columns}[T]
-    \column{0.46\textwidth}
-    {\Huge\cyantext{OCR}}\\[0.4cm]
-    {\Large CER / WER}
-
-    \column{0.46\textwidth}
-    {\Huge\greentext{Serie}}\\[0.4cm]
-    {\Large MSE / RMSE / MAE}
-  \end{columns}
-
-  \vspace{1cm}
-  {\Large\muted{Hace falta ground truth para medir precisi\'on real.}}
+    \vspace{0.35cm}
+    {\Large\muted{Blanco = se\~nal aislada para reconstruir la serie.}}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Problemas corregidos}
@@ -264,8 +242,6 @@
     \item Fechas parciales.
   \end{itemize}
 
-  \vspace{0.6cm}
-  {\Large\greentext{El debug visual hizo visibles los errores.}}
 \end{frame}
 
 \begin{frame}{Cierre}

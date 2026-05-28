@@ -2,44 +2,52 @@
 
 ## 1. Portada
 
-Buenos días. Mi proyecto se llama Reconocimiento de gráficas y consiste en convertir capturas de pantalla de gráficas financieras en series temporales utilizables. La idea es que una imagen rasterizada deje de ser solo una captura y pase a ser una fuente de datos.
+Buenas tardes, yo soy Shiyi y os voy a presentar mi proyecto. Consiste en un flujo de trabajo para el reconocimiento de gráficas y digitalizar sus resultados.
 
-## 2. Objetivo
+## 2. Motivación
 
-El objetivo principal es transformar una captura de pantalla en una serie temporal estructurada. Para eso el sistema tiene que detectar dónde está la gráfica, leer las escalas de los ejes y reconstruir los valores reales de precio y fecha.
+La motivación viene del mercado de artículos digitales de CS2. Hay veces que los precios no se pueden scrapear y es por eso que se ha hecho este trabajo.
 
-## 3. Técnicas implementadas
+## 3. Parte del TFM
 
-El proyecto combina tres partes. Con visión artificial uso OpenCV para localizar regiones y extraer la línea. Con OCR uso PaddleOCR para leer fechas y precios. Y con geometría uso interpolación lineal para pasar de coordenadas de píxel a valores reales.
+El trabajo formaría parte de mi TFM, exactamente el paso anterior a almacenar los datos y pasarselo al modelo de predicción de precios.
 
-## 4. Pipeline
+## 4. Objetivo
 
-El proceso completo tiene cinco fases. Primero se localiza el layout, después se leen los ejes con OCR, luego se extrae la señal visual, se calibra la relación píxel-dato y finalmente se exporta a CSV y JSON. Cada fase genera imágenes de depuración para poder revisar qué ha pasado.
+El objetivo principal es transformar una captura de pantalla en una serie temporal estructurada.
 
-## 5. Layout + OCR
+## 5. Técnicas implementadas
 
-Aquí se ve cómo se delimitan las zonas importantes: el área de la gráfica, el eje X y el eje Y. Sobre esas zonas se aplica OCR para obtener anclas, por ejemplo fechas en el eje horizontal y precios en el vertical. Esas anclas son la referencia para convertir la imagen en datos.
+El proyecto combina tres partes. Con visión artificial uso OpenCV para localizar regiones y extraer la línea. Con OCR uso PaddleOCR para leer fechas y precios. Y se ha usado NumPy e interpolación lineal para pasar de coordenadas de píxel a valores.
 
-## 6. Señal visual
+## 6. Pipeline
 
-En esta parte se extrae la línea de precio. El sistema filtra por color, genera una máscara fina, calcula el centro de la señal en cada columna y reduce el trazo a una línea de un píxel. Esto evita que el grosor de la línea introduzca errores en los picos.
+El proceso completo tiene cinco fases. Primero se localiza el layout, después se leen los ejes con OCR, luego se extrae la señal visual, se calibra la relación píxel-dato y finalmente se exporta a CSV y JSON.
 
-## 7. Calibración
+## 7. Layout + OCR
 
-Una vez tenemos píxeles y anclas, hacemos la transformación geométrica. La posición X se convierte en fecha y la posición Y se convierte en precio. Para ello se usa interpolación lineal entre las anclas detectadas por OCR.
+Aquí tenemos una representación visual de cómo es el layout y como se ha extraido los precios y las fechas.
 
-## 8. Extracción: línea trazada
+## 8. Señal visual
 
-En esta diapositiva se ve la señal detectada sobre la gráfica original. Sirve para comprobar visualmente si el algoritmo está siguiendo la línea correcta y si respeta los cambios bruscos de precio.
+En esta parte se extrae la línea de precio. El sistema filtra por color, genera una máscara fina, calcula el centro de la señal en cada columna y reduce el trazo a una línea de un píxel.
 
-## 9. Extracción: máscara binaria
+## 9. Calibración
 
-Aquí se muestra la misma señal aislada en blanco y negro. El blanco representa los píxeles que el sistema considera parte de la línea. Esta imagen es útil porque elimina el ruido visual de la interfaz y deja solo la estructura que se va a reconstruir.
+Una vez tenemos píxeles y anclas, hacemos la transformación geométrica. La posición X se convierte en fecha y la posición Y se convierte en precio mediante interpolación lineal.
 
-## 10. Problemas corregidos
+## 10. Extracción: línea trazada
 
-Durante el desarrollo aparecieron varios problemas prácticos. El eje X quedaba demasiado bajo, la máscara inicial era demasiado gruesa, el OCR detectaba algunas anclas falsas y algunas fechas salían incompletas. Estas correcciones mejoraron la precisión y la estabilidad del pipeline.
+Aquí se ve la señal detectada sobre la gráfica original. Esta vista sirve para comprobar visualmente si el algoritmo está siguiendo la línea correcta y si respeta los cambios bruscos de precio.
 
-## 11. Cierre
+## 11. Extracción: máscara binaria
 
-En resumen, el proyecto convierte una gráfica rasterizada en datos estructurados. La visión artificial permite entender la imagen, el OCR permite leer las referencias de escala y la geometría permite reconstruir la serie temporal. El resultado queda listo para usarse después en análisis o modelos predictivos.
+Aquí se muestra la misma señal aislada en blanco y negro. El blanco representa los píxeles que el sistema considera parte de la línea, ya sin el ruido visual de la interfaz.
+
+## 12. Problemas corregidos
+
+Durante el desarrollo aparecieron problemas prácticos: el eje X quedaba demasiado bajo, la máscara inicial era demasiado gruesa, el OCR detectaba algunas anclas falsas y algunas fechas salían incompletas. Estas correcciones mejoraron la estabilidad del pipeline.
+
+## 13. Cierre
+
+En resumen, el proyecto convierte una gráfica rasterizada en datos estructurados. La visión artificial permite entender la imagen, el OCR permite leer las referencias de escala y la geometría permite reconstruir la serie temporal.

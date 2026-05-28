@@ -69,6 +69,86 @@
   {\large Shiyi Cheng\\M\'aster MIARFID -- UPV}
 \end{frame}
 
+\begin{frame}{Motivaci\'on}
+  \vspace{0.45cm}
+  \begin{center}
+    {\Huge Mercado CS2}\\[0.45cm]
+    {\Large\muted{Los precios hist\'oricos no siempre se pueden scrapear.}}
+
+    \vspace{0.65cm}
+    \begin{tikzpicture}[
+      node distance=1.25cm,
+      big/.style={
+        rounded corners=4pt,
+        draw=soft,
+        line width=1pt,
+        minimum height=1.25cm,
+        align=center,
+        font=\Large
+      },
+      arr/.style={-{Latex[length=3mm]}, draw=soft, line width=1.2pt}
+    ]
+      \node[big, text width=3.3cm] (screen) {Capturas\\web};
+      \node[big, text width=3.6cm, right=of screen, draw=green, text=green] (module) {Visi\'on\\+ OCR};
+      \node[big, text width=4cm, right=of module] (series) {Series\\temporales};
+
+      \draw[arr] (screen) -- (module);
+      \draw[arr] (module) -- (series);
+    \end{tikzpicture}
+
+    \vspace{0.55cm}
+    {\Large\muted{Este proyecto automatiza ese paso de ingesta.}}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Parte del TFM}
+  \vspace{0.02cm}
+  \begin{center}
+  \begin{tikzpicture}[
+    scale=0.9,
+    transform shape,
+    block/.style={
+      rounded corners=4pt,
+      draw=soft,
+      line width=1pt,
+      align=center,
+      minimum height=0.9cm,
+      font=\large
+    },
+    focus/.style={
+      rounded corners=4pt,
+      draw=green,
+      text=green,
+      line width=1.4pt,
+      align=center,
+      minimum height=1cm,
+      font=\large\bfseries
+    },
+    arr/.style={-{Latex[length=2.8mm]}, draw=soft, line width=1.1pt}
+  ]
+    \node[block, text width=3.4cm] (steam) at (0,2.2) {Steam Market\\Web/API};
+    \node[block, text width=3.4cm] (buff) at (4.2,2.2) {Buff163\\Web/API};
+
+    \node[block, text width=3.1cm] (capture) at (0,0.55) {Agente\\capturador};
+    \node[focus, text width=3.6cm] (recon) at (4.2,0.55) {ReconGrafica\\Visi\'on + OCR};
+    
+
+    \node[block, text width=3.4cm] (ml) at (2.1,-1.55) {Predictor ML\\LSTM};
+    \node[block, text width=3.4cm] (agents) at (6.3,-1.55) {Sistema multiagente\\broker/trader};
+
+    \draw[arr] (steam) -- (capture);
+    \draw[arr] (buff) -- (recon);
+    \draw[arr] (capture) -- (recon);
+    \draw[arr] (recon) -- (ml);
+    \draw[arr] (ml) -- (agents);
+    \draw[arr] (agents) -- (ml);
+  \end{tikzpicture}
+  \end{center}
+
+  \vspace{0.04cm}
+  {\large\muted{M\'odulo de entrada para predicci\'on y arbitraje autom\'atico.}}
+\end{frame}
+
 \begin{frame}{Objetivo}
   \begin{center}
     {\Huge Captura de pantalla\par}
